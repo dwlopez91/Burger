@@ -1,1 +1,19 @@
-<p>THIS IS WORKING</p>
+
+<h1>Burgers!</h1>
+<h2>Choose a burger</h2>
+<ul>
+  {{#each burger}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Add a burger</h2>
+<form class="create-form">
+  
+  Burger:<br>
+  <input type="text" name="burger" value="burger">
+  <br>
+  <button type="submit">Add Burger</button>
+</form>
